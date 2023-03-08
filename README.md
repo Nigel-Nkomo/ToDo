@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# ToDo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains code for a Todo app
+<i>[Click here to view the app](https://todo-ni.netlify.app/)</i>
 
-## Available Scripts
+## About the app
 
-In the project directory, you can run:
+<img src="./public/todo.png"/>
 
-### `npm start`
+ToDo is an app that allows you to add, delete and clear all the things you plan to do.
+You can also change the theme of the application
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Built with
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- HTML
+- CSS
+- React.js
 
-### `npm test`
+## Authors
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Nigel Nkomo
 
-### `npm run build`
+## Study Notes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  <hr/>
+  
+### Browser Session
+* a **browser session** is the mechanism for **recognising** multiple **requests** from the **same** browser
+* it starts when the browser is opened and stops when the browser is shut down
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<hr/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Origin
 
-### `npm run eject`
+- the origin is the **scheme/host/port tuple** of a URL ,e.g. , http://example.com:80 or http://localhost:3000 used to access it
+- the **scheme** is the **protocol** ,e.g. , http
+- the **host** is the **hostname** or the **domain** ,e.g. , example.com
+- the **port**(if specified) is the **communication endpoint**, e.g. , 80 (the default for http) or 443 (the default for https)
+- two URLs have the same origin if all they have the same tuple
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<hr/>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### localStorage data
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- localStorage allows you to **access** and **manipulate** the **Storage object** of the _Document's_ **origin**
+- localStorage data is saved **across** browser sessions, i.e. , it doesn't get cleared when the page is closed
+- However localStorage data for a document opened in **'private browsing'** or **'incognito'** gets **cleared** when the **tab is closed**
+- the **Document** object represents the any web page and the **documentElement** is the **root element**
+- localStorage data is **specific** to the **protocol/scheme** of the **document**, i.e. , it is different for *http://example.com* and \*https://example.com**, and returns a different object
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### methods:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **setItem ( keyName, keyValue )** adds the key's name and value or updates them
+2. **getItem ( keyName )** returns keyValue
+3. **removeItem ( keyName )** removes the key from the Storage object if it exists
+4. **clear ( )** removes all the data in the localStorage object

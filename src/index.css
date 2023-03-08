@@ -1,13 +1,156 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Short+Stack&display=swap");
+
+.dark-theme {
+  --clr-bgr: rgb(0, 0, 0);
+  --clr-content: rgb(255, 255, 255);
+  --btn-bgr: white;
+  --btn-txt-clr: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.light-theme {
+  --clr-bgr: rgb(255, 231, 231);
+  --clr-content: rgb(0, 0, 0);
+  --btn-bgr: black;
+  --btn-txt-clr: white;
+}
+
+html {
+  font-size: 170%;
+}
+
+@media (max-width: 435px) {
+  html {
+    font-size: 150%;
+  }
+}
+
+@media (max-width: 370px) {
+  html {
+    font-size: 110%;
+  }
+}
+
+* {
+  background-color: var(--clr-bgr);
+  color: var(--clr-content);
+  transition-property: color, background-color;
+  transition-duration: 0.5s;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Short Stack", cursive;
+}
+
+.container {
+  width: 40%;
+  margin: 3rem auto;
+  border-radius: 10px;
+  border: 1px solid var(--clr-content);
+  padding: 0.3rem 0;
+}
+
+@media (max-width: 1150px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 530px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.header__heading {
+  text-transform: uppercase;
+}
+
+.header__button {
+  width: fit-content;
+  border: none;
+}
+
+.header__icon {
+  cursor: pointer;
+}
+
+/* CREATE TODO */
+.create-todo {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--clr-content);
+  padding: 1rem;
+}
+
+.create-todo__input {
+  border: none;
+  width: 70%;
+  font-size: 1rem;
+}
+
+/* BUTTONS */
+.btn {
+  border: none;
+  background-color: var(--btn-bgr);
+  color: var(--btn-txt-clr);
+  border-radius: 5px;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn:active {
+  transform: translateY(-1px);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* TODOS */
+.todos {
+  padding: 1rem;
+}
+
+.todos__todo {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.todos__text {
+  width: 80%;
+}
+
+.todos__delete {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.todos__delete:hover {
+  transform: translateY(-3px);
+}
+
+.todo__delete:active {
+  transform: translateY(-1px);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--clr-content);
+  padding: 1rem;
 }
